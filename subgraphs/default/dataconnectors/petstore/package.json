@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "ndc-lambda-sdk host -f functions.ts serve --configuration configuration.json",
+    "watch": "ndc-lambda-sdk host -f functions.ts --watch serve --configuration configuration.json --port 8101"
+  },
+  "dependencies": {
+    "@hasura/ndc-lambda-sdk": "0.4.0",
+    "@microsoft/kiota-abstractions": "^1.0.0-preview.36",
+    "@microsoft/kiota-http-fetchlibrary": "^1.0.0-preview.35",
+    "@microsoft/kiota-serialization-form": "^1.0.0-preview.25",
+    "@microsoft/kiota-serialization-json": "^1.0.0-preview.36",
+    "@microsoft/kiota-serialization-multipart": "^1.0.0-preview.15",
+    "@microsoft/kiota-serialization-text": "^1.0.0-preview.33",
+    "node-emoji": "2.1.3"
+  }
+}

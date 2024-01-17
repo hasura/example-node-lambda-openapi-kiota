@@ -1,0 +1,32 @@
+kind: DataConnector
+version: v2
+definition:
+  name: hello
+  url:
+    singleUrl:
+      stringValueFromSecret: HELLO_URL
+  schema:
+    collections: []
+    functions:
+    - arguments:
+        name:
+          type:
+            type: nullable
+            underlying_type:
+              name: String
+              type: named
+      name: hello
+      result_type:
+        name: String
+        type: named
+    object_types: {}
+    procedures:
+    - arguments: {}
+      name: foo
+      result_type:
+        name: String
+        type: named
+    scalar_types:
+      String:
+        aggregate_functions: {}
+        comparison_operators: {}

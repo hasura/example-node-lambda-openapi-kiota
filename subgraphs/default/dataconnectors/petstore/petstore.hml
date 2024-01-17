@@ -1,0 +1,13 @@
+kind: DataConnector
+version: v2
+definition:
+  name: petstore
+  url:
+    singleUrl:
+      stringValueFromSecret: PET_URL
+  schema:
+    collections: []
+    functions: []
+    object_types: {}
+    procedures: []
+    scalar_types: {}

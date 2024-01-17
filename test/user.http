@@ -1,0 +1,14 @@
+POST http://localhost:8101/query
+Content-Type: application/json
+
+{
+  "collection": "getUser",
+  "query": {},
+  "arguments": {
+    "username": {
+      "value": "user1",
+      "type": "literal"
+    }
+  },
+  "collection_relationships": {}
+}

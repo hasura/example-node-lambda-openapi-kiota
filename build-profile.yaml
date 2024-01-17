@@ -1,0 +1,20 @@
+version: 2
+spec:
+  environment: default
+  mode: replace
+  supergraph:
+    resources:
+    - supergraph/*
+  subgraphs:
+  - name: default
+    resources:
+    - subgraphs/default/**/*.hml
+    connectors:
+      hello:
+        watchCommand: npm run watch
+        path: subgraphs/default/dataconnectors/hello
+        connectorConfigFile: hello.hml
+      petstore:
+        watchCommand: npm run watch
+        path: subgraphs/default/dataconnectors/petstore
+        connectorConfigFile: petstore.hml

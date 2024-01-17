@@ -1,0 +1,22 @@
+kind: Command
+version: v1
+definition:
+  name: foo
+  outputType: String!
+  arguments: []
+  source:
+    dataConnectorName: hello
+    dataConnectorCommand:
+      procedure: foo
+  graphql:
+    rootFieldKind: Mutation
+    rootFieldName: foo
+
+---
+kind: CommandPermissions
+version: v1
+definition:
+  commandName: foo
+  permissions:
+    - role: admin
+      allowExecution: true

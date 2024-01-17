@@ -1,0 +1,2 @@
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1pet/put - The operation updatePet has a request body with a complex properties and the url form encoded content type. This is not supported by Kiota and serialization of complex properties will fail.
+Warning: KiotaBuilder OpenAPI warning: #/paths/~1pet/post - The operation addPet has a request body with a complex properties and the url form encoded content type. This is not supported by Kiota and serialization of complex properties will fail.

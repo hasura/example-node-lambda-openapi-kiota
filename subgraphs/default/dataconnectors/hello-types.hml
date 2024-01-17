@@ -1,0 +1,8 @@
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: hello
+  dataConnectorScalarType: String
+  representation: String
+  graphql:
+    comparisonExpressionTypeName: HelloStringComparisonExp

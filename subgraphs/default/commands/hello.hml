@@ -1,0 +1,24 @@
+kind: Command
+version: v1
+definition:
+  name: hello
+  outputType: String!
+  arguments:
+    - name: name
+      type: String
+  source:
+    dataConnectorName: hello
+    dataConnectorCommand:
+      function: hello
+  graphql:
+    rootFieldKind: Query
+    rootFieldName: hello
+
+---
+kind: CommandPermissions
+version: v1
+definition:
+  commandName: hello
+  permissions:
+    - role: admin
+      allowExecution: true
