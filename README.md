@@ -1,4 +1,4 @@
-# Example Kiora OpenAPI Data Connector
+# Example Kiota OpenAPI Data Connector
 
 Just like the label says on the tin!
 
