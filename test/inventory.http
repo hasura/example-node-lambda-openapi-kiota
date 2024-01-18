@@ -1,0 +1,10 @@
+POST http://localhost:8101/query
+Content-Type: application/json
+
+{
+  "collection": "getStoreInventory",
+  "query": {},
+  "collection_relationships": {},
+  "arguments": {
+  }
+}
