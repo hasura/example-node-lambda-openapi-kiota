@@ -4,7 +4,7 @@ definition:
   name: petstore
   url:
     singleUrl:
-      stringValueFromSecret: PET_URL
+      stringValueFromSecret: PETSTORE_URL
   schema:
     collections: []
     functions: []

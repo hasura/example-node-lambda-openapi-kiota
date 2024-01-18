@@ -25,7 +25,7 @@ export async function login(username: string, password: string): Promise<string>
 
 /**
  * @pure
- * @param username  - Works with example username user1
+ * @param username Works with example username user1
  * @returns User
  */
 export async function getUser(username: string): Promise<User> {
