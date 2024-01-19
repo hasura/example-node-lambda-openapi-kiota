@@ -1,0 +1,72 @@
+kind: ScalarType
+version: v1
+definition:
+  name: getUser_output_field_additionalData
+  graphql:
+    typeName: getUserOutputFieldadditionaldata
+
+---
+kind: ScalarType
+version: v1
+definition:
+  name: getUser_output_field_responseHeaders
+  graphql:
+    typeName: getUserOutputFieldresponseheaders
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: petstore
+  dataConnectorScalarType: getUser_output_field_'additionalData
+  representation: getUser_output_field_additionalData
+  graphql:
+    comparisonExpressionTypeName: getUserOutputFieldadditionaldataComparisonExp
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: petstore
+  dataConnectorScalarType: String
+  representation: String
+  graphql:
+    comparisonExpressionTypeName: PetstoreStringComparisonExp
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: petstore
+  dataConnectorScalarType: Float
+  representation: Float
+  graphql:
+    comparisonExpressionTypeName: PetstoreFloatComparisonExp
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: petstore
+  dataConnectorScalarType: getUser_output_field_'responseHeaders
+  representation: getUser_output_field_responseHeaders
+  graphql:
+    comparisonExpressionTypeName: getUserOutputFieldresponseheadersComparisonExp
+
+---
+kind: ScalarType
+version: v1
+definition:
+  name: getStoreInventory_output_field_additionalData
+  graphql:
+    typeName: getStoreInventoryOutputFieldadditionaldata
+
+---
+kind: DataConnectorScalarRepresentation
+version: v1
+definition:
+  dataConnectorName: petstore
+  dataConnectorScalarType: getStoreInventory_output_field_'additionalData
+  representation: getStoreInventory_output_field_additionalData
+  graphql:
+    comparisonExpressionTypeName: getStoreInventoryOutputFieldadditionaldataComparisonExp

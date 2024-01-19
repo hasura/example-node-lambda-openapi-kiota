@@ -1,0 +1,26 @@
+kind: Command
+version: v1
+definition:
+  name: login
+  outputType: String!
+  arguments:
+    - name: password
+      type: String!
+    - name: username
+      type: String!
+  source:
+    dataConnectorName: petstore
+    dataConnectorCommand:
+      procedure: login
+  graphql:
+    rootFieldKind: Mutation
+    rootFieldName: login
+
+---
+kind: CommandPermissions
+version: v1
+definition:
+  commandName: login
+  permissions:
+    - role: admin
+      allowExecution: true

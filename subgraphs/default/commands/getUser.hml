@@ -1,0 +1,86 @@
+kind: ObjectType
+version: v1
+definition:
+  name: User
+  graphql:
+    typeName: user
+    inputTypeName: userInput
+  fields:
+    - name: additionalData
+      type: getUser_output_field_additionalData!
+    - name: email
+      type: String!
+    - name: firstName
+      type: String!
+    - name: id
+      type: Float!
+    - name: lastName
+      type: String!
+    - name: message
+      type: String!
+    - name: name
+      type: String!
+    - name: password
+      type: String!
+    - name: phone
+      type: String!
+    - name: responseHeaders
+      type: getUser_output_field_responseHeaders!
+    - name: responseStatusCode
+      type: Float!
+    - name: stack
+      type: String!
+    - name: userStatus
+      type: Float!
+    - name: username
+      type: String!
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: User
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - additionalData
+          - email
+          - firstName
+          - id
+          - lastName
+          - message
+          - name
+          - password
+          - phone
+          - responseHeaders
+          - responseStatusCode
+          - stack
+          - userStatus
+          - username
+
+---
+kind: Command
+version: v1
+definition:
+  name: getUser
+  outputType: User!
+  arguments:
+    - name: username
+      type: String!
+  source:
+    dataConnectorName: petstore
+    dataConnectorCommand:
+      function: getUser
+  graphql:
+    rootFieldKind: Query
+    rootFieldName: getUser
+
+---
+kind: CommandPermissions
+version: v1
+definition:
+  commandName: getUser
+  permissions:
+    - role: admin
+      allowExecution: true

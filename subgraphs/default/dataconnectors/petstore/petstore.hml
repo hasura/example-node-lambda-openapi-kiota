@@ -7,7 +7,114 @@ definition:
       stringValueFromSecret: PETSTORE_URL
   schema:
     collections: []
-    functions: []
-    object_types: {}
-    procedures: []
-    scalar_types: {}
+    functions:
+    - arguments:
+        username:
+          description: Works with example username user1
+          type:
+            name: String
+            type: named
+      name: getUser
+      result_type:
+        name: User
+        type: named
+    - arguments: {}
+      name: getStoreInventory
+      result_type:
+        name: InventoryGetResponse
+        type: named
+    object_types:
+      InventoryGetResponse:
+        fields:
+          additionalData:
+            type:
+              name: getStoreInventory_output_field_'additionalData
+              type: named
+      User:
+        fields:
+          additionalData:
+            type:
+              name: getUser_output_field_'additionalData
+              type: named
+          email:
+            type:
+              name: String
+              type: named
+          firstName:
+            type:
+              name: String
+              type: named
+          id:
+            type:
+              name: Float
+              type: named
+          lastName:
+            type:
+              name: String
+              type: named
+          message:
+            type:
+              name: String
+              type: named
+          name:
+            type:
+              name: String
+              type: named
+          password:
+            type:
+              name: String
+              type: named
+          phone:
+            type:
+              name: String
+              type: named
+          responseHeaders:
+            type:
+              name: getUser_output_field_'responseHeaders
+              type: named
+          responseStatusCode:
+            type:
+              name: Float
+              type: named
+          stack:
+            type:
+              name: String
+              type: named
+          userStatus:
+            type:
+              name: Float
+              type: named
+          username:
+            type:
+              name: String
+              type: named
+    procedures:
+    - arguments:
+        password:
+          type:
+            name: String
+            type: named
+        username:
+          type:
+            name: String
+            type: named
+      name: login
+      result_type:
+        name: String
+        type: named
+    scalar_types:
+      Float:
+        aggregate_functions: {}
+        comparison_operators: {}
+      String:
+        aggregate_functions: {}
+        comparison_operators: {}
+      getStoreInventory_output_field_'additionalData:
+        aggregate_functions: {}
+        comparison_operators: {}
+      getUser_output_field_'additionalData:
+        aggregate_functions: {}
+        comparison_operators: {}
+      getUser_output_field_'responseHeaders:
+        aggregate_functions: {}
+        comparison_operators: {}

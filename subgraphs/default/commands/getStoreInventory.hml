@@ -1,0 +1,45 @@
+kind: ObjectType
+version: v1
+definition:
+  name: InventoryGetResponse
+  graphql:
+    typeName: inventoryGetResponse
+    inputTypeName: inventoryGetResponseInput
+  fields:
+    - name: additionalData
+      type: getStoreInventory_output_field_additionalData!
+
+---
+kind: TypePermissions
+version: v1
+definition:
+  typeName: InventoryGetResponse
+  permissions:
+    - role: admin
+      output:
+        allowedFields:
+          - additionalData
+
+---
+kind: Command
+version: v1
+definition:
+  name: getStoreInventory
+  outputType: InventoryGetResponse!
+  arguments: []
+  source:
+    dataConnectorName: petstore
+    dataConnectorCommand:
+      function: getStoreInventory
+  graphql:
+    rootFieldKind: Query
+    rootFieldName: getStoreInventory
+
+---
+kind: CommandPermissions
+version: v1
+definition:
+  commandName: getStoreInventory
+  permissions:
+    - role: admin
+      allowExecution: true
