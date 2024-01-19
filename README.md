@@ -30,3 +30,17 @@ Steps:
 * Create an entrypoint `functions.ts` in the new dataconnector
 * Add setup and definintions for the client functionality
 * Test with `hasura3 watch`
+
+Generating the client with Kiota via docker:
+
+```sh
+# Get the PetStore API
+curl -L https://petstore3.swagger.io/api/v3/openapi.json \
+  | yq -P > petstore.yaml
+
+# Generate the client
+docker run -v `pwd`/subgraphs/default/dataconnectors/petstore/client:/app/client \
+  -v `pwd`/subgraphs/default/dataconnectors/petstore/petstore.yaml:/app/openapi.yml \
+  mcr.microsoft.com/openapi/kiota:1.10.1 generate \
+  --language typescript -d /app/openapi.yml -c PetstoreClient -o /app/client
+```
