@@ -1,6 +1,6 @@
 # Example Kiota OpenAPI Data Connector
 
-Just like the label says on the tin!
+A dataconnector interface to the PetStore API.
 
 Links:
 
